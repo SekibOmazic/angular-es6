@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <head>
+        <title>Angular-es6</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+        <link rel="stylesheet" href="bower_components/angular-growl/build/angular-growl.min.css" />
+        <link rel="stylesheet" href="../build/todo.css" />
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div growl></div>
+            <div class="row" ng-controller="TodoController as tc" ng-include="'src/todo.html'"></div>
+        </div>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-growl/build/angular-growl.js"></script>
+        <script src="bower_components/traceur/traceur.js"></script>
+        <script src="../build/script.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+
+</html>
