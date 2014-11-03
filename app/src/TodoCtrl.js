@@ -25,7 +25,8 @@ class TodoCtrl {
         this.newTodo = '';
     }
 
-    removeTodo(index) {
+    removeTodo(item) {
+        let index = this.items.indexOf(item);
         let anItem = this.items.splice(index, 1);
         console.log(anItem[0]);
         this.growl.addWarnMessage(anItem[0].toString()+'removed', {ttl: 3000});

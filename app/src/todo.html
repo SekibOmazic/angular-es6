@@ -10,7 +10,7 @@
             <br>
             <div class="list-group">
                 <div class="list-group-item todo-item" ng-repeat="item in tc.items" ng-class="{'todo-complete': item.complete}">
-                    <span class="close" ng-click="tc.removeTodo($index)">&times;</span>
+                    <span class="close" ng-click="tc.removeTodo(item)">&times;</span>
                     <label>
                         <input type="checkbox" ng-model="item.complete">
                         <span ng-bind="item.text">This is the content of the Todo</span>
