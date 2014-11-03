@@ -4,6 +4,4 @@ Simple TODO App written with AngularJS 1.3 using ES6 syntax. Transpiled by trace
 
 next
 =====
-Template literal doesn't work. Traceur or gulp-traceur? Must fix.
-
 Introduce ES6+ annotations

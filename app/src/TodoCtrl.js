@@ -19,7 +19,6 @@ class TodoCtrl {
      */
     addTodo() {
         let anItem = new TodoItem(this.newTodo);
-        console.log(anItem);
         this.growl.addInfoMessage(anItem.toString()+'added', {ttl: 3000});
         this.items.push(anItem);
         this.newTodo = '';
@@ -28,7 +27,6 @@ class TodoCtrl {
     removeTodo(item) {
         let index = this.items.indexOf(item);
         let anItem = this.items.splice(index, 1);
-        console.log(anItem[0]);
         this.growl.addWarnMessage(anItem[0].toString()+'removed', {ttl: 3000});
     }
 

@@ -10,7 +10,7 @@ class TodoItem {
     }
 
     toString() {
-        return '${this.text}...';
+        return `${this.text}...`;
     }
 
 }
