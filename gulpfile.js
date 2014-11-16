@@ -9,7 +9,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('es6', function () {
-    return gulp.src('app/src/**/*.js')
+    return gulp.src(['app/src/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(traceur({ experimental:true, blockBinding: true, sourceMaps: true }))
         .pipe(concat('script.js'))

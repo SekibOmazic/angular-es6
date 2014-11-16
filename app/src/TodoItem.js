@@ -1,16 +1,16 @@
 class TodoItem {
 
-    constructor(text, completed = false) {
-        this.text = text;
-        this.completed = completed;
-    }
+  constructor(text, completed = false) {
+    this.text = text;
+    this.completed = completed;
+  }
 
-    toggle() {
-        this.completed = !this.completed;
-    }
+  toggle() {
+    this.completed = !this.completed;
+  }
 
-    toString() {
-        return `${this.text}...`;
-    }
+  toString() {
+    return `${this.text}...`;
+  }
 
 }

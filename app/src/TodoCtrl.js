@@ -1,38 +1,28 @@
-/**
- * Will be compiled into a function that can take the constructor parameters
- */
 class TodoCtrl {
 
-    /**
-     * Here you can use inject all the usual stuff, $http, $route...
-     */
-    constructor(growl) {
-        this.growl = growl;
+  constructor(growl, TodoService) {
+    this.growl = growl;
+    this.service = TodoService;
 
-        // Everything living on 'this' will be available to the templates as 'main'
-        this.newTodo = '';
-        this.items = [new TodoItem('This is a demo todo.', true)];
-    }
+    this.items = this.service.getAll();
+    this.newTodo = '';
+  }
 
-    /**
-     * All methods located on the body of the class will also be available to the named controller
-     */
-    addTodo() {
-        let anItem = new TodoItem(this.newTodo);
-        this.growl.addInfoMessage(anItem.toString()+'added', {ttl: 3000});
-        this.items.push(anItem);
-        this.newTodo = '';
-    }
+  addTodo() {
+    let anItem = new TodoItem(this.newTodo);
+    this.growl.addInfoMessage(anItem.toString()+' added', {ttl: 2000});
+    this.service.add(anItem);
+    this.newTodo = '';
+  }
 
-    removeTodo(item) {
-        let index = this.items.indexOf(item);
-        let anItem = this.items.splice(index, 1);
-        this.growl.addWarnMessage(anItem[0].toString()+'removed', {ttl: 3000});
-    }
+  removeTodo(item) {
+    let removed = this.service.remove(item);
+    this.growl.addWarnMessage(removed.toString()+'removed', {ttl: 2000});
+  }
 
-    clearAll() {
-        this.items = [];
-        this.growl.addErrorMessage('All Clear', {ttl: 3000});
-    }
+  clearAll() {
+    this.service.clearAll();
+    this.growl.addErrorMessage('All Clear', {ttl: 2000});
+  }
 
 }

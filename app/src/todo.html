@@ -9,10 +9,10 @@
             </form>
             <br>
             <div class="list-group">
-                <div class="list-group-item todo-item" ng-repeat="item in tc.items" ng-class="{'todo-complete': item.complete}">
+                <div class="list-group-item todo-item" ng-repeat="item in tc.items" ng-class="{'todo-complete': item.completed}">
                     <span class="close" ng-click="tc.removeTodo(item)">&times;</span>
                     <label>
-                        <input type="checkbox" ng-model="item.complete">
+                        <input type="checkbox" ng-model="item.completed">
                         <span ng-bind="item.text">This is the content of the Todo</span>
                     </label>
                 </div>
