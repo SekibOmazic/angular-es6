@@ -30,6 +30,7 @@ class TodoCtrl {
 
 }
 
-TodoCtrl.$inject = ['growl', 'TodoService'];
+// useless
+// TodoCtrl.$inject = ['growl', 'TodoService'];
 
 export default TodoCtrl;

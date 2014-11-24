@@ -1,7 +1,7 @@
 import TodoItem from './TodoItem';
 
 // @Service
-export class TodoService {
+class TodoService {
 
   constructor() {
     this.todos = [
