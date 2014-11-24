@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 
     <head>
         <title>Angular-es6</title>
@@ -19,9 +19,21 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-growl/build/angular-growl.js"></script>
+
         <script src="bower_components/traceur/traceur.js"></script>
+        <script src="bower_components/es6-module-loader/dist/es6-module-loader.js"></script>
+        <script src="bower_components/system.js/dist/system.js"></script>
+
         <script src="../build/script.js"></script>
-        <script src="app.js"></script>
+        <!--<script src="app.js"></script>-->
+
+        <script>
+            System.import("./app").then(function(){
+                angular.element(document).ready(function() {
+                    angular.bootstrap(document, ['app']);
+                });
+            }).catch(console.error.bind(console));
+        </script>
 
     </body>
 

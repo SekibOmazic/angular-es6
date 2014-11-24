@@ -9,9 +9,9 @@ gulp.task('css', function() {
 });
 
 gulp.task('es6', function () {
-    return gulp.src(['app/src/**/*.js'])
+    return gulp.src(['app/app.js', 'app/src/**/*.js'])
         .pipe(sourcemaps.init())
-        .pipe(traceur({ experimental:true, blockBinding: true, sourceMaps: true }))
+        .pipe(traceur({ modules: 'instantiate', experimental:true, blockBinding: true, sourceMaps: true }))
         .pipe(concat('script.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build'));

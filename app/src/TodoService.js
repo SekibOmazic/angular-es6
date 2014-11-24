@@ -1,10 +1,7 @@
-/*
- Do we have annotation like @Service in Angular 2.0?
- Maybe it isn't even needed.
- */
+import TodoItem from './TodoItem';
 
 // @Service
-class TodoService {
+export class TodoService {
 
   constructor() {
     this.todos = [
@@ -35,3 +32,5 @@ class TodoService {
   }
 
 }
+
+export default TodoService;

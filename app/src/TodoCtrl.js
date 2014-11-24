@@ -1,3 +1,6 @@
+import TodoService from './TodoService';
+import TodoItem from './TodoItem';
+
 class TodoCtrl {
 
   constructor(growl, TodoService) {
@@ -26,3 +29,7 @@ class TodoCtrl {
   }
 
 }
+
+TodoCtrl.$inject = ['growl', 'TodoService'];
+
+export default TodoCtrl;

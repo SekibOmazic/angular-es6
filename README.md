@@ -1,6 +1,6 @@
 angular-es6
 ===========
-Simple TODO App written with AngularJS 1.3 using ES6 syntax. Transpiled by traceur.
+Simple TODO App written with AngularJS 1.3 using ES6 syntax. Transpiled by traceur. (Recommended read http://guybedford.com/practical-workflows-for-es6-module)
 
 next
 =====
