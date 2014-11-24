@@ -4,6 +4,8 @@ Simple TODO App written with AngularJS 1.3 using ES6 syntax. Transpiled by trace
 
 next
 =====
+Use System.import to bootstrap app.
+
 Introduce ES6+ annotations
 
 ## Setup

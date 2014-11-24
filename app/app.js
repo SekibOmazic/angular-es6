@@ -1,6 +1,7 @@
 angular
-    .module('app', [
+  .module('app', [
         'ngAnimate',
         'angular-growl'
-    ])
-    .controller('TodoController', TodoCtrl);
+  ])
+  .service('TodoService', TodoService)
+  .controller('TodoController', TodoCtrl);

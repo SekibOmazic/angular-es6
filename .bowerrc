@@ -1,5 +1,3 @@
 {
-  "directory": "app/bower_components",
-  "proxy": "http://www-proxy.bayern.de:80",
-  "https-proxy": "http://www-proxy.bayern.de:80"
+  "directory": "app/bower_components"
 }
